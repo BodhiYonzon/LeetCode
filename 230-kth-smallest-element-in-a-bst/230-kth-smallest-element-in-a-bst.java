@@ -20,7 +20,7 @@ class Solution {
         return ans;
     }
     int inorder(TreeNode root,int k){
-        if(root==null)
+        if(root==null||ans!=Integer.MAX_VALUE)
             return k;
         k=inorder(root.left,k);
         k--;

@@ -14,7 +14,7 @@
  * }
  */
 class BSTIterator {
-    List<TreeNode> inorder;
+    List<Integer> inorder;
     int point;
 
     public BSTIterator(TreeNode root) {
@@ -26,13 +26,13 @@ class BSTIterator {
         if(root==null)
             return;
         inorderTraversal(root.left);
-        inorder.add(root);
+        inorder.add(root.val);
         inorderTraversal(root.right);
         return;
     }
     
     public int next() {
-        return inorder.get(point++).val;
+        return inorder.get(point++);
     }
     
     public boolean hasNext() {

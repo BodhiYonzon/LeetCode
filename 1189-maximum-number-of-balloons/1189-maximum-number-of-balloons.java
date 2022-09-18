@@ -16,7 +16,10 @@ class Solution {
         }
         a[2]/=2;
         a[3]/=2;
-        Arrays.sort(a);
-        return a[0];
+        int min=a[0];
+        for(int i=0;i<5;i++)
+            if(a[i]<min)
+                min=a[i];
+        return min;
     }
 }
